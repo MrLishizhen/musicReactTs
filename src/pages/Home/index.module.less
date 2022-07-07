@@ -1,0 +1,78 @@
+
+.com{
+  width:100%;
+  height:100%;
+  overflow-y: scroll;
+  .scroll{
+    //overflow-y:auto;
+    //overflow:hidden;
+    border-radius: 0.05rem;
+  }
+  .rightTab{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content{
+    padding:0.2rem 0.2rem 0rem;
+    .recommend_the_playlist{
+      .playlist_top{
+
+      }
+      .playlist_com{
+        padding:0.1rem 0;
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &>div{
+          padding:0.1rem;
+        }
+      }
+
+    }
+    .recommend_songs{
+      overflow: hidden;
+      //padding:0 0.1rem;
+      .songs_box{
+        width:100%;
+        overflow-x:auto;
+        padding: 0.1rem 0;
+        .songs{
+          display:flex;
+          width:120%;
+          flex-wrap: wrap;
+          &>div{
+            padding:0.1rem 0.1rem;
+            box-sizing: border-box;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.home_tab{
+  box-sizing: border-box;
+  padding-top:0.1rem;
+  height:0.7rem;
+  width:100%;
+  display:flex;
+  .home_tab_li{
+    width:25%;
+    height:100%;
+    font-size:0.12rem;
+    line-height:0.18rem;
+    color:#666;
+    .home_tab_top{
+      width:0.4rem;
+      height:0.4rem;
+      background-color: #ff5e5e;
+      margin:0 auto;
+      border-radius:50%;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

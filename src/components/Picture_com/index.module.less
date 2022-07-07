@@ -1,0 +1,32 @@
+.picture_com{
+  width:0.92rem;
+  display:flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  img{
+    clip:rect(100%,100%);
+    width:100%;
+    height:auto;
+    border-radius: 0.05rem;
+  }
+  .loading{
+    width:100%;
+    //height:calc(100% - 10px);
+
+  }
+  .span{
+    //height:0.3rem;
+    margin:0.05rem 0;
+    font-size: 0.12rem;
+    //overflow: hidden;
+    //text-overflow: ellipsis;
+    //white-space: nowrap;
+    //line-height: 0.3rem;
+    color:#999;
+    display: -webkit-box;
+    overflow: hidden; /*超出隐藏*/
+    text-overflow: ellipsis;/*隐藏后添加省略号*/
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:1; //想显示多少行
+  }
+}
