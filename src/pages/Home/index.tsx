@@ -76,13 +76,13 @@ export default function Home() {
                 <div className={styles.content}>
                     <div className={styles.recommend_the_playlist}>
                         <div className={styles.playlist_top}>
-                            <TitleBar leftTitle={'推荐歌单'} right={PlayListTitle}></TitleBar>
+                            <TitleBar leftTitle={'推荐歌单'} link={'Classification'} right={PlayListTitle}></TitleBar>
                         </div>
                         <div className={styles.playlist_com}>
                             {
                                 pictureCom.map((u: PictureCom) => {
                                     return <React.Fragment key={u.id}>
-                                        <PictureCom data={{...u,width_str:'33.33333%'}}></PictureCom>
+                                        <PictureCom data={{...u,width_str:'33.33333%',link:`songlist/${u.id}`}}></PictureCom>
                                     </React.Fragment>
                                 })
 

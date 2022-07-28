@@ -9,7 +9,8 @@ interface PictureCom{
     id:number,
     picUrl:string,
     name:string,
-    width_str?:string
+    width_str?:string,
+    link?:string,
     [propName:string]:any,
 }
 //推荐歌单
@@ -29,5 +30,22 @@ interface subList{
 interface PlayList{
     coverImgUrl:string,
     name:string,
-    id:number
+    id:number,
+}
+
+//歌单详情
+interface PlayListDetails{
+    coverImgUrl:string,
+    name:string,
+    id:number,
+    description?:string,
+    tags?:string[],
+
+}
+interface song{
+    ar?:string,
+    al?:string,
+    index?:number,
+    name?:string,
+    id?:number,
 }

@@ -4,33 +4,33 @@ import Tab from '../../components/AppTab'
 import Component from "../../components/Components";
 import Music_play from '../../components/Music_play'
 import {showFunc,hideFunc} from '../../redux/action/play'
-// interface play_type{
-//     play?:any,
-//     children?:ReactNode,
-//     dispatch?:any,
-// }
-// interface play {
-//     Play?:any
-// }
-// import {connect} from 'react-redux'
-const Layout=()=> {
-
+interface play_type{
+    play?:any,
+    children?:ReactNode,
+    dispatch?:any,
+}
+interface play {
+    Play?:any
+}
+import {connect} from 'react-redux'
+const Layout=(props:any)=> {
+    console.log(props)
     return (
         <div className={styles.layout_box}>
             <Component/>
-            {/*<Music_play isShow={{display:props.play.show?'block':'none'}}></Music_play>*/}
+            <Music_play isShow={{display:props.play.show?'block':'none'}}></Music_play>
             <Tab/>
         </div>
     )
 }
 
-export default Layout;
+// export default Layout;
 
-// connect((store:play)=>{
-//
-//     return {play:store.Play}
-//     // return {}
-// },{
-//     showFunc,
-//     hideFunc
-// })(Layout)
+export default connect((store:play)=>{
+
+    return {play:store.Play}
+    // return {}
+},{
+    showFunc,
+    hideFunc
+})(Layout)

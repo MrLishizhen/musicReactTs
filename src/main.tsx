@@ -5,17 +5,17 @@ import './index.css'
 import App from './App'
 import './resize.js'
 import '@icon-park/react/styles/index.css'
-// import store from './redux/index'
-// import {Provider} from 'react-redux'
+import store from './redux/index'
+import {Provider} from 'react-redux'
 
 
 import '@icon-park/react/styles/index.css';
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
-            {/*<Provider store={store}>*/}
+            <Provider store={store}>
                 <App/>
-            {/*</Provider>*/}
+            </Provider>
         </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')

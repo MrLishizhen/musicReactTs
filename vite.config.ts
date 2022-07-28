@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-
+const path = require('path');
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -15,6 +15,12 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, '') // 路径重写
       }
     }
+  },
+  resolve: {
+    // 路径别名
+    alias: [
+      { find: '@', replacement: path.resolve(__dirname, './src') }
+    ]
   }
 
 })

@@ -136,7 +136,7 @@ export default function Classification(){
                 </div>
 
                 {/*滚动列表*/}
-                <ListCom data={[...list_data]} title={emptyTitle} scrllFc={onChangFc}></ListCom>
+                <ListCom data={[...list_data]} type={0} title={emptyTitle} scrllFc={onChangFc}></ListCom>
             </div>
             <div className={styles.module} ref={getdom} onClick={modulefunc} style={{display:ismodule?'block':'none'}}>
                 <div className={styles.module_box}>

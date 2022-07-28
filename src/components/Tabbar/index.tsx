@@ -5,8 +5,9 @@ const Tabbar:React.FC<any> = (props) => {
 
     let leftTitle= props.leftTitle||'发现';
     let content = props.content||""
+    let styles = props.styles||{};
     return (
-        <div className={style.tabbar_box}>
+        <div className={style.tabbar_box} style={{...styles}}>
             <div className={style.tabbar_left}>
                 {leftTitle}
             </div>
